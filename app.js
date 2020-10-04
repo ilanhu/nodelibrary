@@ -3,8 +3,6 @@ var chalk = require('chalk');
 var debug = require('debug')('app');
 var morgan = require('morgan');
 var path = require('path');
-const { SSL_OP_NO_QUERY_MTU } = require('constants');
-const sql = require('mssql');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
@@ -12,18 +10,6 @@ const session = require('express-session');
 
 var app = express();
 var port = process.env.PORT || 3001;
-
-const config = {
-    user: 'nodeilan',
-    password: 'Q123456w',
-    server: 'mynodelib.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
-    database: 'nodelibrary',
-    options: {
-        encrypt: true
-    }
-}
-
-sql.connect(config).catch(err => debug(err));
 
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
