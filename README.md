@@ -8,4 +8,4 @@ https://app.pluralsight.com/library/courses/nodejs-express-web-applications-upda
 Initializing app on local machine
 
 In order for this to run on local machine a mongo db installation is required.
-After that got to http://localhost:4100/admin once in order to insert some data.
+After that go to http://localhost:4100/admin once in order to insert some data.
